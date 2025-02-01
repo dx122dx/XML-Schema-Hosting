@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xs:schema id="SavedPage"
-    targetNamespace="https://dx122dx.github.io/XMLSchema-Host/SavedPage.xsd"
+    targetNamespace="https://raw.githubusercontent.com/dx122dx/XMLSchema-Host/main/SavedPage.xsd"
     elementFormDefault="qualified"
-    xmlns="https://dx122dx.github.io/XMLSchema-Host/SavedPage.xsd"
-    xmlns:pjn="https://dx122dx.github.io/XMLSchema-Host/SavedPage.xsd"
+    xmlns="https://raw.githubusercontent.com/dx122dx/XMLSchema-Host/main/SavedPage.xsd"
+    xmlns:pjn="https://raw.githubusercontent.com/dx122dx/XMLSchema-Host/main/SavedPage.xsd"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
 >
   
