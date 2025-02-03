@@ -47,6 +47,50 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Define">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Pens">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Pen" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="Brush" type="xs:hexBinary"/>
+                        <xs:attribute name="Width" type="xs:positiveInteger"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Brushes">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Brush" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="Mode" type="xs:nonNegativeInteger"/>
+                        <xs:attribute name="Color" type="xs:hexBinary"/>
+                        <xs:attribute name="Image" type="xs:hexBinary"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Fonts">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Font">
+                      <xs:complexType>
+                        <xs:attribute name="Family" type="xs:string"/>
+                        <xs:attribute name="Size" type="xs:positiveInteger"/>
+                        <xs:attribute name="Style" type="xs:hexBinary"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:sequence>
       <xs:attribute name="Version" type="xs:nonNegativeInteger" default="0"/>
     </xs:complexType>
