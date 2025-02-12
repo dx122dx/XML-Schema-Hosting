@@ -40,33 +40,28 @@
             <xs:attribute name="Background" type="xs:hexBinary"/>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Elements">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="Element" type="pjn:Element" maxOccurs="unbounded"/>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
         <xs:element name="Define">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Pens">
+              <xs:element name="Images">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="Pen" minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="Image" minOccurs="0" maxOccurs="unbounded">
                       <xs:complexType>
-                        <xs:attribute name="Brush" type="xs:hexBinary"/>
-                        <xs:attribute name="Width" type="xs:positiveInteger"/>
+                        <xs:attribute name="Id" type="xs:hexBinary"/>
+                        <xs:attribute name="Hash" type="xs:hexBinary"/>
+                        <xs:attribute name="Extension" type="xs:token"/>
                       </xs:complexType>
                     </xs:element>
                   </xs:sequence>
-                </xs:complexType>
+                </xs:complexType>  
               </xs:element>
               <xs:element name="Brushes">
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element name="Brush" minOccurs="0" maxOccurs="unbounded">
                       <xs:complexType>
+                        <xs:attribute name="Id" type="xs:hexBinary"/>
                         <xs:attribute name="Mode" type="xs:nonNegativeInteger"/>
                         <xs:attribute name="Color" type="xs:hexBinary"/>
                         <xs:attribute name="Image" type="xs:hexBinary"/>
@@ -75,11 +70,25 @@
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
+              <xs:element name="Pens">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Pen" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="Id" type="xs:nonNegativeInteger"/>
+                        <xs:attribute name="Brush" type="xs:hexBinary"/>
+                        <xs:attribute name="Width" type="xs:positiveInteger"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
               <xs:element name="Fonts">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="Font">
+                    <xs:element name="Font" minOccurs="0" maxOccurs="unbounded">
                       <xs:complexType>
+                        <xs:attribute name="Id" type="xs:hexBinary"/>
                         <xs:attribute name="Family" type="xs:string"/>
                         <xs:attribute name="Size" type="xs:positiveInteger"/>
                         <xs:attribute name="Style" type="xs:hexBinary"/>
@@ -88,6 +97,13 @@
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Elements">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Element" type="pjn:Element" maxOccurs="unbounded"/>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
